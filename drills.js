@@ -77,31 +77,33 @@ findLast(SLL);
 
 //drill 4 ---- O(n) || O(log(n))
 
-function reverseList(SLL) {
-    const newList = SLL;
-    if(SLL.head === null) {
-        return null;
-    } else {
-        let current = SLL.head;
-        while(current !== null) {
-            newList.insertFirst(current.value);
-            current = current.next
-        }
-    }
-    console.log(display(newList));
-    return newList;
-}
-reverseList(SLL);
+// function reverseList(SLL) {
+//     const newList = SLL;
+//     if(SLL.head === null) {
+//         return null;
+//     } else {
+//         let current = SLL.head;
+//         while(current !== null) {
+//             newList.insertFirst(current.value);
+//             current = current.next
+//         }
+//     }
+//     console.log(display(newList));
+//     return newList;
+// }
+// reverseList(SLL);
 
 function findThird(SLL) {
     let current = SLL.head;
     let prev = SLL.head;
     let res = SLL.head;
     while(current.next !== null) {
-        res = prev -2;
+        res = prev
         prev = current;
         current = current.next;
     }
     return res.value;
 }
 console.log(findThird(SLL));
+
+
